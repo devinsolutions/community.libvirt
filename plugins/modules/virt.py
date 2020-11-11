@@ -568,7 +568,7 @@ def core(module):
                     else:
                         res = {'changed': True, 'created': domain.name()}
                 except libvirtError as e:
-                    module.fail_json(msg='libvirtError: %s' % e.message)
+                    module.fail_json(msg='libvirtError: %s' % e)
                 if autostart is not None and v.autostart(domain_name, autostart):
                     res = {'changed': True, 'change_reason': 'autostart'}
 

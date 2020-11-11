@@ -1,0 +1,2 @@
+bugfixes:
+  - virt - Fix error reporting on Python 3
