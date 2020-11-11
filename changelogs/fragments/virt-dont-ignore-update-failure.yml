@@ -1,0 +1,5 @@
+breaking_changes:
+  - virt - Don't silently ignore error "domain already exists" when using command "define" to update
+    an existing domain, fail instead. This error happens when the user tries to update a domain
+    without providing tag ``uuid`` in the domain XML. To update a domain, provide tag ``uuid`` in
+    the XML (this module will warn you if you fail to do that).
